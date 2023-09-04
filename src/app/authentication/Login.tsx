@@ -34,7 +34,7 @@ const login = () => {
                   className="position-relative"
                 >
                   { <Loader />}
-                  <div className="mb-3">
+                  {/* <div className="mb-3">
                     <FormInput
                       label="Username"
                       type="text"
@@ -60,7 +60,7 @@ const login = () => {
                       className="form-control pe-5"
                       placeholder="Enter Password"
                     />
-                  </div>
+                  </div> */}
     
                   <div className="form-check form-check-info font-size-16">
                     <input
