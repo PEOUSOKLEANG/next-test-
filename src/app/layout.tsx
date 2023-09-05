@@ -1,7 +1,6 @@
-import './globals.css'
+// import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import Login from './authentication/Login'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,8 +16,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Login></Login>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {/* <div>Global layout</div> */}
+        {children}
+        
+        </body>
     </html>
   )
 }
