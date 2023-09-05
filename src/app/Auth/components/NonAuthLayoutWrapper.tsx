@@ -2,10 +2,13 @@ import Link from 'next/link'
 import React from 'react'
 import { Col, Container, Row } from 'reactstrap'
 
+interface NonAuthLayoutWrapperProps {
+  children: any;
+}
 
-const Sidebar = () => {
+const NonAuthLayoutWrapper  = (props:NonAuthLayoutWrapperProps) => {
   return (
-   <>
+ 
          <div className="auth-bg">
         <Container fluid className="p-0">
           <Row className=" g-0">
@@ -15,11 +18,11 @@ const Sidebar = () => {
                   <h3>
                     <Link href="/" className="text-white">
                       <i className="bx bxs-message-alt-detail align-middle text-white h3 mb-1 me-2"></i>{" "}
-                      Doot
+                      Interfaec
                     </Link>
                   </h3>
                   <p className="font-size-16">
-                    Responsive Bootstrap 5 Chat App
+                    Local chat 
                   </p>
                 </div>
                 <div className="mt-auto">
@@ -31,8 +34,7 @@ const Sidebar = () => {
             <Col xl={9} lg={8}>
               <div className="authentication-page-content">
                 <div className="d-flex flex-column h-100 px-4 pt-4">
-                  
-
+                {props.children}
                   <Row className="">
                     <Col xl={12}>
                       <div className="text-center text-muted p-4">
@@ -50,8 +52,8 @@ const Sidebar = () => {
           </Row>
         </Container>
       </div>
-   </>
+ 
   )
 }
 
-export default Sidebar
+export default NonAuthLayoutWrapper 
